@@ -1,0 +1,161 @@
+
+.timeTableSchedule {
+}
+
+.timeTableSchedule .clear {
+    clear: both;
+    height: 0;
+    line-height: 0;
+}
+
+.timeTableSchedule .sc_wrapper {
+}
+
+.timeTableSchedule .sc_menu {
+    width: 100%;
+    height: 26px;
+}
+
+.timeTableSchedule .sc_menu .sc_header_cell {
+    float: left;
+}
+
+.timeTableSchedule .sc_menu .sc_header {
+    float: left;
+    height: 26px;
+    position: relative;
+    overflow: hidden;
+}
+
+.timeTableSchedule .sc_menu .sc_header .sc_time {
+    text-align: center;
+    border-left: solid 1px #FFF;
+    background: #333;
+}
+
+.timeTableSchedule .sc_menu .sc_header_cell,
+.timeTableSchedule .sc_data {
+    float: left;
+    font-weight: bold;
+    color: #FFFFFF;
+    background: #333;
+    position: relative;
+}
+
+.timeTableSchedule .sc_menu .sc_header_scroll,
+.timeTableSchedule .sc_data .sc_data_scroll {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.timeTableSchedule .sc_menu .sc_header_cell,
+.timeTableSchedule .sc_header .sc_time,
+.timeTableSchedule .sc_main_scroll .sc_time {
+    color: #FFFFFF;
+    padding: 4px 0;
+    line-height: 18px;
+    height: 25px;
+    display: block;
+}
+
+.timeTableSchedule .sc_header .sc_time,
+.timeTableSchedule .sc_main_scroll .sc_time {
+    float: left;
+}
+
+.timeTableSchedule .sc_main_box,
+.timeTableSchedule .sc_data {
+    max-height: 500px;
+    overflow: hidden;
+}
+
+.timeTableSchedule .sc_main_box {
+    float: left;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+.timeTableSchedule .sc_main_scroll {
+}
+
+.timeTableSchedule .sc_main {
+    position: relative;
+}
+
+.timeTableSchedule .timeline {
+    position: relative;
+}
+
+.timeTableSchedule .sc_Bar {
+    position: absolute;
+    color: #FFF;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 2px 2px 4px #333;
+    -moz-box-shadow: 2px 2px 4px #333;
+    -webkit-box-shadow: 2px 2px 4px #333;
+    background: rgba(79,147,214,0.9);
+}
+
+.timeTableSchedule .ui-draggable-dragging,
+.timeTableSchedule .ui-resizeable {
+    z-index: 20;
+}
+
+.timeTableSchedule .sc_Bar .head {
+    display: block;
+    padding: 6px 8px 0;
+    font-size: 12px;
+    height: 24px;
+    overflow: hidden;
+}
+
+.timeTableSchedule .sc_Bar .text {
+    display: block;
+    padding: 0px 8px 0;
+    font-weight: bold;
+    height: 16px;
+    line-height: 100%;
+    overflow: hidden;
+}
+
+.timeTableSchedule .timeline,
+.timeTableSchedule .sc_main .tb {
+    border-bottom: solid 2px #666;
+}
+
+.timeTableSchedule .sc_data .timeline {
+    overflow: hidden;
+}
+
+.timeTableSchedule .sc_data .timeline span {
+    padding: 10px;
+    display: block;
+}
+
+.timeTableSchedule .sc_data .timeline span.photo {
+    float: left;
+    width: 36px;
+    height: 36px;
+    padding: 10px 0 10px 10px;
+}
+
+.timeTableSchedule .sc_data .timeline span.title {
+    float: left;
+    padding: 10px 0 10px 10px;
+    width: 92px;
+}
+
+.timeTableSchedule .sc_main_scroll .sc_main {
+}
+
+.timeTableSchedule .sc_main_scroll .sc_main .tl {
+    float: left;
+    height: 100%;
+    border-right: solid 1px #CCC;
+}
+
+.timeTableSchedule .sc_main_scroll .sc_main .tl:hover {
+    background: #F0F0F0;
+}

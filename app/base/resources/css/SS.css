@@ -1,0 +1,294 @@
+html, body {
+    height: 100%;
+}
+
+/*========= Mask Style =======*/
+.ajax_overlay {
+    height: 100vh !important;
+}
+
+.ajax_loader {
+    background: url(../images/loading1.gif) no-repeat center center transparent;
+    width: 100%;
+    height: 100vh;
+}
+
+/*========= Mask Style =======*/
+
+.programPannel {
+    /*background-color: #BCDDF3;*/
+}
+
+.hide {
+    display: none;
+}
+
+.columnTitle {
+    text-align: left;
+    vertical-align: top;
+}
+
+.columnContent {
+    text-align: left;
+}
+
+.columnContentUnit {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.buttonSection {
+    text-align: center;
+}
+
+.jqx-docking-panel {
+    min-height: 0px !important;
+}
+
+/*==========recover bootstrap css============*/
+.row {
+    /*margin-bottom: 5px;*/
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.programPannel .panel, .well {
+    margin-bottom: 0px;
+}
+
+.programPannel .panel-sm .panel-heading {
+    padding: 5px 15px;
+}
+
+.programPannel .panel-sm .panel-body {
+    padding: 5px;
+    font-size: 0.8em;
+}
+
+.panel-section {
+    margin: 5px;
+}
+
+.panel-section .panel-heading {
+    padding: 0px !important;
+}
+
+.panel-section .panel-heading .btn {
+    text-align: left !important;
+}
+
+.panel-section .panel-body {
+    padding: 5px !important;
+}
+
+.panel-section .panel {
+    padding: 10px !important;
+}
+
+/*==========recover bootstrap css============*/
+
+/*======= Page content & validation style =========*/
+
+label {
+    display: inline-block;
+    width: 120px;
+}
+
+fieldset {
+    padding: 7px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    /*margin-top: 5px;*/
+}
+
+strong {
+    font-weight: 700;
+}
+
+.validationMessage {
+    color: #f00;
+    /*padding-left: 5px;*/
+    /*color: #fff;*/
+    font-size: 0.8em;
+}
+
+.errorMessageSection {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #FCF2A8;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.columnContentContainer {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+/*.bubble {*/
+/*position: relative;*/
+/*/!*width: 115px;*!/*/
+/*/!*height: 20px;*!/*/
+/*padding: 3px;*/
+/*background: #FCF2A8;*/
+/*-webkit-border-radius: 4px;*/
+/*-moz-border-radius: 4px;*/
+/*border-radius: 4px;*/
+/*border: #909090 solid 1px;*/
+
+/*cursor: pointer;*/
+/*-moz-box-shadow: 4px 4px 12px -2px rgba(20%, 20%, 40%, 0.5);*/
+/*-webkit-box-shadow: 4px 4px 12px -2px rgba(20%, 20%, 40%, 0.5);*/
+/*box-shadow: 4px 4px 12px -2px rgba(20%, 20%, 40%, 0.5);*/
+/*}*/
+
+/*.bubble:after {*/
+/*content: '';*/
+/*position: absolute;*/
+/*border-style: solid;*/
+/*border-width: 8px 8px 8px 0;*/
+/*border-color: transparent #FCF2A8;*/
+/*display: block;*/
+/*width: 0;*/
+/*z-index: 1;*/
+/*left: -8px;*/
+/*top: 2px;*/
+/*}*/
+
+/*.bubble:before {*/
+/*content: '';*/
+/*position: absolute;*/
+/*border-style: solid;*/
+/*border-width: 8px 8px 8px 0;*/
+/*border-color: transparent #909090;*/
+/*display: block;*/
+/*width: 0;*/
+/*z-index: 0;*/
+/*left: -9px;*/
+/*top: 2px;*/
+/*}*/
+*::-ms-backdrop, .bubble {
+    margin-top: 25px;
+    margin-left: 20px;
+    position: absolute;
+    /*width: 165px;*/
+    /*height: 30px;*/
+    padding: 3px;
+    background: #FCF2A8;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: #909090 solid 1px;
+
+    cursor: pointer;
+    -moz-box-shadow: 4px 4px 12px -2px rgba(20%, 20%, 40%, 0.5);
+    -webkit-box-shadow: 4px 4px 12px -2px rgba(20%, 20%, 40%, 0.5);
+    box-shadow: 4px 4px 12px -2px rgba(20%, 20%, 40%, 0.5);
+    z-index: 99999;
+}
+
+.bubble {
+    margin-left: 20px;
+    margin-top: 25px \9;
+    position: absolute;
+    /*width: 165px;*/
+    /*height: 30px;*/
+    padding: 3px;
+    background: #FCF2A8;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: #909090 solid 1px;
+
+    cursor: pointer;
+    -moz-box-shadow: 4px 4px 12px -2px rgba(20%, 20%, 40%, 0.5);
+    -webkit-box-shadow: 4px 4px 12px -2px rgba(20%, 20%, 40%, 0.5);
+    box-shadow: 4px 4px 12px -2px rgba(20%, 20%, 40%, 0.5);
+    z-index: 99999;
+}
+
+.bubble:after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 0 7px 5px;
+    border-color: #FCF2A8 transparent;
+    display: block;
+    width: 0;
+    z-index: 1;
+    top: -5px;
+    left: 11px;
+}
+
+/*======= Page content & validation style =========*/
+
+/*======= UIAlert Css =======*/
+.alertMessageDiv {
+    position: absolute;
+    padding: 10px 30px;
+    width: 100%;
+}
+
+.alert-message {
+    position: relative;
+    z-index: 999999999;
+    width: 100%;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/*======= UIAlert Css =======*/
+
+.addBookmarkCss {
+    text-decoration: none;
+}
+
+.marqueeCss a {
+    text-decoration: none;
+}
+
+.epaperTitle {
+    font-size: 25px;
+    line-height: 50px;
+    padding-left: 10px;
+    border-bottom: #b2b2b2 1px solid;
+    color: black;
+}
+
+.epaperForm {
+    padding: 10px 0;
+    color: black;
+}
+
+.linkset a {
+    text-decoration: none;
+    color: black;
+}
+
+.linkset span {
+    text-decoration: none;
+    color: black;
+}
+
+.linkset {
+    margin: 0px;
+    padding: 0px 5px 5px 5px;
+}
+
+.linkset li {
+    list-style: none;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: arial, ｍｓ ｐゴシック, ms pgothic, 돋움, dotum, helvetica, sans-serif;
+    margin-top: 5px;
+}
+
+.linkset .linksetHalign {
+    display: inline;
+    float: left;
+    margin-right: 5px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
