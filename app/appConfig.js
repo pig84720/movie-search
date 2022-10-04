@@ -24,26 +24,15 @@ SS.namespace = function (namespace, value) {
     return parent;
 };
 
-//設定Service連結位置v
+//設定Service連結位置
 SS.namespace("SS.service.baseUrl");
 SS.namespace("SS.app.baseUrl");
 SS.namespace("SS.ssapi.url");
-SS.namespace("SS.signalR.url");
-SS.namespace("SS.portal.serverInfo");
+SS.namespace("SS.image.baseUrl");
+SS.namespace("SS.apiKey");
 
-SS.service.baseUrl = "https://ap.searching-service.com/SSService/";
-// if (location.host == '') {
-//     SS.app.baseUrl = location.href.replace('file://', '').substr(0, location.href.replace('file://', '').indexOf('/www/') + 5);
-// } else {
-//     var baseUrlArray = location.href.split(location.hostname + (location.port != '' ? ':' + location.port : '') + '/');
-//     SS.app.baseUrl = '/' + (baseUrlArray.length > 1 ? (baseUrlArray[1].indexOf('/') > -1 ? baseUrlArray[1].split('/')[0] + '/' : baseUrlArray[1]) : '');
-// }
+SS.service.baseUrl = "https://api.themoviedb.org/3/movie/";
 SS.app.baseUrl = "/";
-SS.portal.serverInfo = [
-    'SSSQYHFC02',
-    'PP',
-    '',
-    '',
-    'S'
-];
+SS.image.baseUrl = "https://image.tmdb.org/t/p/w500";
+SS.apiKey = "2b6190c7ca4e58aac8a43283286cbce7";
 SS.ssapi.token='VfaU+LJXyYZp7Nr3mFhCQtBfZ/rL2AQmOjkOW4W1uZVumEKn0wIHcD/RsdkmgB8di2Y9HFgUS/7HFxHm4m9eACLvfBCTdBEGoGqcd6RDUeZNSwlOrVeFarS9bEalGyz6';
