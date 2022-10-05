@@ -55,7 +55,7 @@ define(function (require) {
         navbarSection: {
             type: "section",
             searchBox: "",
-            clickSearch: function() {
+            clickSearch: function () {
                 const searchBox = document.querySelector(".search-box");
                 const searchBtn = document.querySelector(".search-icon");
                 const cancelBtn = document.querySelector(".cancel-icon");
@@ -66,7 +66,7 @@ define(function (require) {
                 cancelBtn.classList.add("active");
                 searchInput.focus();
             },
-            clickCancel: function() {
+            clickCancel: function () {
                 const searchBox = document.querySelector(".search-box");
                 const searchBtn = document.querySelector(".search-icon");
                 const cancelBtn = document.querySelector(".cancel-icon");

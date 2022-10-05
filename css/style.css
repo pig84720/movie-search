@@ -124,6 +124,7 @@ body {
     background: rgba(0, 0, 0, 0.5);
     display: flex;
     align-items: center;
+    overflow: hidden;
 }
 
 .swiper {
@@ -143,18 +144,12 @@ body {
     object-fit: cover;
 }
 
-.iconSection {
-    display: flex;
-    align-items: center;
-    padding-left: 30px;
-    position: absolute;
-    left: 40px;
-}
-
 .icon {
-    width: 40px;
+    width: 160px;
     height: auto;
     margin-right: 15px;
+    position: absolute;
+    left: 60px;
 }
 
 .iconText {
