@@ -25,7 +25,8 @@ define(function (require) {
         id: '',
         init: function (programId, initVar, callback) {
             //設定背景圖(因背景圖檔較大,會延遲到js的載入)
-            $("body").css("background-image", "url('/image/pexels-pixabay-355887.jpg')");
+            // $("body").css("background-image", "url('/image/pexels-pixabay-355887.jpg')");
+            $("body").css("background-image", "url('/movie-search/image/pexels-pixabay-355887.jpg')");
             getData(SS.service.baseUrl + "popular", { "api_key": SS.apiKey, "language": "zh-TW", "page": "1" })
                 .then(data => {
                     let outputData = data.results.map((item) => {
