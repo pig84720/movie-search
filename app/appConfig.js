@@ -33,6 +33,7 @@ SS.namespace("SS.apiKey");
 
 SS.service.baseUrl = "https://api.themoviedb.org/3/movie/";
 SS.app.baseUrl = "/movie-search/";
+// SS.app.baseUrl = "/";
 SS.image.baseUrl = "https://image.tmdb.org/t/p/w500";
 SS.apiKey = "2b6190c7ca4e58aac8a43283286cbce7";
 SS.ssapi.token='VfaU+LJXyYZp7Nr3mFhCQtBfZ/rL2AQmOjkOW4W1uZVumEKn0wIHcD/RsdkmgB8di2Y9HFgUS/7HFxHm4m9eACLvfBCTdBEGoGqcd6RDUeZNSwlOrVeFarS9bEalGyz6';

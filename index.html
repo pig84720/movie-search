@@ -1,71 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        html,
-        body {
-          position: relative;
-          height: 100%;
-        }
-  
-        body {
-          background: black !important;
-          font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-          font-size: 14px;
-          color: #000;
-          margin: 0;
-          padding: 0;
-        }
-  
-        .swiper {
-          width: 80%;
-          height: 80%;
-        }
-  
-        .swiper-slide {
-          text-align: center;
-          font-size: 18px;
-          background: black;
-          background-position: center;
-          background-repeat: no-repeat;
-  
-          /* Center slide text vertically */
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: -webkit-flex;
-          display: flex;
-          -webkit-box-pack: center;
-          -ms-flex-pack: center;
-          -webkit-justify-content: center;
-          justify-content: center;
-          -webkit-box-align: center;
-          -ms-flex-align: center;
-          -webkit-align-items: center;
-          align-items: center;
-        }
-  
-        .swiper-slide img {
-          display: block;
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>電影查詢系統</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
-<body>
-    <div class="swiper mySwiper" data-bind="with: slideSection">
-        <div class="swiper-wrapper">
-          <!-- ko foreach: kSlideList.list -->
-            <div class="swiper-slide" data-bind="style: { backgroundImage: backgroundImage }"></div>
-          <!-- /ko -->
-        </div>
-        <div class="swiper-pagination"></div>
+
+<body style="display: none;">
+  <div class="container"></div>
+  <div class="navbar" data-bind="with: navbarSection">
+    <div class="iconSection">
+      <img class="icon" src="https://cdn-icons-png.flaticon.com/512/777/777242.png">
+      <div class="iconText">電影查詢系統</div>
     </div>
+    <div class="search-box">
+      <input type="text" placeholder="輸入電影或演員名稱..." data-bind="value: searchBox">
+      <div class="search-icon" data-bind="click: clickSearch">
+        <i class="fas fa-search"></i>
+      </div>
+      <div class="cancel-icon" data-bind="click: clickCancel">
+        <i class="fas fa-times"></i>
+      </div>
+    </div>
+  </div>
+  <div class="swiper mySwiper" data-bind="with: slideSection">
+    <div class="swiper-wrapper">
+      <!-- ko foreach: kSlideList.list -->
+      <img class="swiper-slide" data-bind="attr: { src: imageSrc }">
+      <!-- /ko -->
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
 </body>
+
 </html>
 <script src="app/appConfig.js"></script>
 <script data-main="app/main/index" src="app/require.js"></script>
