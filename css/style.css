@@ -1,3 +1,72 @@
+/* body */
+* {
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+}
+
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    /* font-family: Helvetica Neue, Helvetica, Arial, sans-serif; */
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.mask {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.6);
+    min-height: 100vh;
+    width: 100% !important;
+    margin: 0;
+    padding: 0 !important;
+}
+
+.swiper {
+    width: 80%;
+    height: 70%;
+}
+
+.swiper-slide {
+    height: 100%;
+    width: auto;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* navbar  */
+.navbar {
+  width: 100% !important;
+  min-height: 80px !important;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.icon {
+    width: 160px;
+    height: auto;
+    margin-right: 15px;
+    position: absolute;
+    left: 60px;
+}
+
+/* search-box */
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 *{
   margin: 0;
@@ -9,6 +78,7 @@
   color: #fff;
   background: #664AFF;
 }
+
 .search-box{
   position: fixed;
   right: 60px;
@@ -91,69 +161,85 @@
   display: none;
 }
 
-html,
-body {
-    position: relative;
-    height: 100%;
+/* modal */
+.modal-movie-detail {
+  height: 100%; 
+  display: none; 
+  justify-content: center; 
+  align-items: center;
 }
 
-body {
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    color: #000;
-    margin: 0;
-    padding: 0;
+.modal-content {
+  height: 80%; 
+  width: 70%;
 }
 
-.container {
-    position: fixed;
-    background: rgba(0, 0, 0, 0.6);
-    min-height: 100vh;
-    width: 100% !important;
-    margin: 0;
-    padding: 0 !important;
+.modal-header {
+  display: flex; 
+  justify-content: space-between;
 }
 
-.navbar {
-    width: 100% !important;
-    min-height: 80px !important;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    overflow: hidden;
+.modal-body {
+  height: 100%; 
+  width: 100%; 
+  display: flex; 
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 100%;
+  /* background-size: cover; */
+  padding: 20px 20px !important;
 }
 
-.swiper {
-    width: 80%;
-    height: 70%;
+.modal-mask {
+  background: rgba(255, 255, 255, 0.7); 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%;
 }
 
-.swiper-slide {
-    height: 100%;
-    width: auto;
+.poster-container {
+  padding: 30px 20px;
 }
 
-.swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.poster {
+  width: 100%;
+  height: auto;
+  border-radius: 7px 7px 0 0;
 }
 
-.icon {
-    width: 160px;
-    height: auto;
-    margin-right: 15px;
-    position: absolute;
-    left: 60px;
+.content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 15px !important;
 }
 
-.iconText {
-    color: white;
-    font-size: 18px;
-    font-family: 微軟正黑體;
+.movie-title {
+  font-weight: bolder;
+  font-size: 32px;
+  color: #000;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+  margin: 0 0 15px 0;
+}
+
+.release-year {
+  color: #4D6A6D; 
+  font-weight: 500;
+}
+
+.summary-title {
+  font-weight: bolder;
+  font-size: 22px;
+  color: #000;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+  padding: 5px 0 !important;
+}
+
+.summary-content {
+  font-size: 16px;
+  color: #000;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
 }

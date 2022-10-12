@@ -10,10 +10,13 @@
   <link rel="shortcut icon" href="/movie-search/image/movie-icon.png">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
 </head>
 
 <body style="display: none;">
-  <div class="container"></div>
+  <div class="mask"></div>
   <div class="navbar" data-bind="with: navbarSection">
     <!-- <img class="icon" src="/image/movie-icon-Large.png"> -->
     <img class="icon" src="/movie-search/image/movie-icon-Large.png">
@@ -30,11 +33,33 @@
   <div class="swiper mySwiper" data-bind="with: slideSection">
     <div class="swiper-wrapper">
       <!-- ko foreach: kSlideList.list -->
-      <img class="swiper-slide" data-bind="attr: { src: imageSrc }">
+      <img class="swiper-slide lazyload" data-bind="attr: { src: imageSrc }">
       <!-- /ko -->
     </div>
     <div class="swiper-pagination"></div>
   </div>
+
+  <div class="modal fade modal-movie-detail" tabindex="-1" role="dialog" data-bind="with: modalSection" style="display: none;">
+    <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">電影簡介</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body row" data-bind="style: { backgroundImage: modalBackgroundImage }">
+          <div class="modal-mask"></div>
+          <div class="col-lg-4 col-md-4 col-sm-5 col-xs-5 poster-container">
+            <img class="poster lazyload" data-bind="attr: { src: posterSrc }" alt="電影海報">
+          </div>
+          <div class="col-lg-8 col-md-8 col-sm-7 col-xs-7 content-container">
+            <div class="movie-title" data-bind="text: movieTitle"><span class="release-year" data-bind="text: releaseYear"></span></div>
+            <div class="summary-title">概要</div>
+            <div class="summary-content" data-bind="text: summaryContent"></div>
+          </div>
+        </div>
+    </div>
+</div>
 </body>
 
 </html>

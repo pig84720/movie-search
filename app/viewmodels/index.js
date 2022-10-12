@@ -2,6 +2,7 @@ define(function (require) {
     'use strict';
     var modelToViewModel = require('ModelToViewModel');
     var Swiper = require('swiper');
+    var lazyload = require('lazyload');
     // 依據參數產生對應url
     var url_maker = (url, para) => {
         let first_item = true;
@@ -29,6 +30,7 @@ define(function (require) {
             $("body").css("background-image", "url('/movie-search/image/pexels-pixabay-355887.jpg')");
             getData(SS.service.baseUrl + "popular", { "api_key": SS.apiKey, "language": "zh-TW", "page": "1" })
                 .then(data => {
+                    $.jStorage.set("movie-list", data.results);
                     let outputData = data.results.map((item) => {
                         return {
                             imageSrc: SS.image.baseUrl + item.poster_path
@@ -44,13 +46,20 @@ define(function (require) {
                         },
                         on: {
                             click: function (swiper, event) {
+                                var movieDtail = $.jStorage.get('movie-list')[swiper.clickedIndex];
+                                viewModel.modalSection.modalBackgroundImage(`url('${SS.image.baseUrl + movieDtail.backdrop_path}')`);
+                                viewModel.modalSection.posterSrc(SS.image.baseUrl + movieDtail.poster_path);
+                                viewModel.modalSection.movieTitle(movieDtail.title);
+                                viewModel.modalSection.releaseYear('(' + movieDtail.title + ')');
+                                viewModel.modalSection.summaryContent(movieDtail.overview);
+                                $(`.modal-movie-detail`).css(`display`,`flex`);
+                                $(`.modal-movie-detail`).modal(`show`);
                             }
                         }
                     });
                     $("body").css("display", "block");
                     callback();
                 });
-
         },
         navbarSection: {
             type: "section",
@@ -85,6 +94,29 @@ define(function (require) {
                 template: {},
                 list: []
             },
+        },
+        modalSection: {
+            type: "section",
+            modalBackgroundImage: {
+                type: '',
+                value: ''
+            },
+            posterSrc: {
+                type: '',
+                value: ''
+            },
+            movieTitle: {
+                type: '',
+                value: ''
+            },
+            releaseYear: {
+                type: '',
+                value: ''
+            },
+            summaryContent: {
+                type: '',
+                value: ''
+            }
         }
     };
     var viewModel = modelToViewModel.generateViewModel(model);

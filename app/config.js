@@ -65,8 +65,9 @@ require.config({
     "baseComponentList": "base/components/List",
     "componentList": "components/List",
 
-    //swiper
-    "swiper": "utils/swiper-bundle.min"
+    //other tools
+    "swiper": "utils/swiper-bundle.min",
+    "lazyload": "utils/jquery.lazyload.min"
   },
   shim: {
     'knockout': {
@@ -129,7 +130,10 @@ require.config({
     },
     'showdown-prettify': {
       deps: ['showdown']
-    }
+    },
+    'lazyload': {
+      deps: ['jQuery']
+    },
   },
   waitSeconds: 0
 });
