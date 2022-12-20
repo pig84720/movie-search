@@ -22,6 +22,7 @@ define(function (require) {
             method: 'GET',
         }).then(response => response.json());
     };
+    var swiper;
 
     var model = {
         id: '',
@@ -38,7 +39,7 @@ define(function (require) {
                         }
                     });
                     viewModel.slideSection.kSlideList.setData(outputData);
-                    var swiper = new Swiper(".mySwiper", {
+                    swiper = new Swiper(".mySwiper", {
                         slidesPerView: 3,
                         spaceBetween: 30,
                         pagination: {
@@ -79,7 +80,8 @@ define(function (require) {
                         }
                     });
                     viewModel.slideSection.kSlideList.setData(outputData);
-                    var swiper = new Swiper(".mySwiper", {
+                    swiper.destroy();
+                    swiper = new Swiper(".mySwiper", {
                         slidesPerView: 3,
                         spaceBetween: 30,
                         pagination: {
@@ -113,7 +115,8 @@ define(function (require) {
                         }
                     });
                     viewModel.slideSection.kSlideList.setData(outputData);
-                    var swiper = new Swiper(".mySwiper", {
+                    swiper.destroy();
+                    swiper = new Swiper(".mySwiper", {
                         slidesPerView: 3,
                         spaceBetween: 30,
                         pagination: {
@@ -159,7 +162,8 @@ define(function (require) {
                                     }
                                 });
                                 viewModel.slideSection.kSlideList.setData(outputData);
-                                var swiper = new Swiper(".mySwiper", {
+                                swiper.destroy();
+                                swiper = new Swiper(".mySwiper", {
                                     slidesPerView: 3,
                                     spaceBetween: 30,
                                     pagination: {
