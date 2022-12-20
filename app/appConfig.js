@@ -31,7 +31,8 @@ SS.namespace("SS.ssapi.url");
 SS.namespace("SS.image.baseUrl");
 SS.namespace("SS.apiKey");
 
-SS.service.baseUrl = "https://api.themoviedb.org/3/movie/";
+// SS.service.baseUrl = "https://api.themoviedb.org/3/movie/";
+SS.service.baseUrl = "https://jekxk71547.execute-api.ap-northeast-1.amazonaws.com/SIT/movies/";
 SS.app.baseUrl = "/movie-search/";
 // SS.app.baseUrl = "/";
 SS.image.baseUrl = "https://image.tmdb.org/t/p/w500";

@@ -1,0 +1,25 @@
+<table align=center border=0 cellPadding=0 cellSpacing=0 width=630>
+    <tr>
+        <td width="15%"><span style="color:#ff0080;font-size: medium;" data-bind="text: viewModel.programId"></span></td>
+        <td width="70%" ALIGN=CENTER>
+            <span style="color: green;font-size: large" data-bind="text: viewModel.programName"></span>
+        </td>
+        <td width="15%">
+            <div data-bind='component: {name:"ui-button", params: {viewModel: titleSection.addFav}}'></div>
+        </td>
+    </tr>
+<tr>
+    <td width=90% colSpan=3 style="font-size: small">
+        <span>單位：</span><span style="color:#FF0000;" data-bind="text: $.trim(viewModel.userCompany())+$.trim(viewModel.userDepartment())"></span>&nbsp;
+        　	<span>代碼：</span><span style="color:#FF0000;" data-bind="text: viewModel.userId"></span>&nbsp;
+        　	<span>姓名：</span><span style="color:#FF0000;" data-bind="text: viewModel.userName"></span>&nbsp;
+        　	<span>登錄時間：</span><span style="color:#FF0000;" data-bind="text: viewModel.loginTime"></span>
+    </td>　
+    <!--<td WIDTH="10%"><div align=right id=HelpPage style="cursor:hand">-->
+        <!--<span color=blue size="2"><U>說明</U></span>-->
+    <!--</div></td>-->
+</tr>
+<tr>
+    <td colSpan=3><HR></td>
+</tr>
+</table>

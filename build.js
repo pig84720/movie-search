@@ -1,10 +1,6 @@
 ({
-    modules: [  //編譯的設定維護在這裡
-        //專案元件編譯設定
-        {name: "components/viewmodels/TitleBarHLC"},
-
-        //開發程式編譯設定
-        {name: "main/template010"}
+    modules: [
+        { name: "main/index" },
     ],
     baseUrl: "app",
     paths: {

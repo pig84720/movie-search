@@ -13,6 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body style="display: none;">
@@ -20,8 +21,10 @@
   <div class="navbar" data-bind="with: navbarSection">
     <!-- <img class="icon" src="/image/movie-icon-Large.png"> -->
     <img class="icon" src="/movie-search/image/movie-icon-Large.png">
+    <h3 class="menu trending" data-bind="click: trending">熱門電影</h3>
+    <h3 class="menu upcoming" data-bind="click: upcoming">即將上映</h3>
     <div class="search-box">
-      <input type="text" placeholder="輸入電影或演員名稱..." data-bind="value: searchBox">
+      <input type="text" placeholder="輸入電影名稱" data-bind="value: searchBox">
       <div class="search-icon" data-bind="click: clickSearch">
         <i class="fas fa-search"></i>
       </div>
