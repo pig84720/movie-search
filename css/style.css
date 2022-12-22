@@ -71,6 +71,7 @@ h3 {
     margin-right: 15px;
     position: absolute;
     left: 60px;
+    cursor: pointer;
 }
 
 .menu {
