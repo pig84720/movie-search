@@ -19,8 +19,8 @@
 <body style="display: none;">
   <div class="mask"></div>
   <div class="navbar" data-bind="with: navbarSection">
-    <!-- <img class="icon" src="/image/movie-icon-Large.png"> -->
-    <img class="icon" src="/movie-search/image/movie-icon-Large.png">
+    <!-- <img class="icon" src="/image/movie-icon-Large.png" data-bind="click: popular"> -->
+    <img class="icon" src="/movie-search/image/movie-icon-Large.png" data-bind="click: popular">
     <h3 class="menu trending" data-bind="click: trending">熱門電影</h3>
     <h3 class="menu upcoming" data-bind="click: upcoming">即將上映</h3>
     <div class="search-box">
@@ -39,7 +39,8 @@
       <img class="swiper-slide lazyload" data-bind="attr: { src: imageSrc }">
       <!-- /ko -->
     </div>
-    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
   </div>
 
   <div class="modal fade modal-movie-detail" tabindex="-1" role="dialog" data-bind="with: modalSection" style="display: none;">

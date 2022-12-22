@@ -42,9 +42,13 @@ define(function (require) {
                     swiper = new Swiper(".mySwiper", {
                         slidesPerView: 3,
                         spaceBetween: 30,
-                        pagination: {
-                            el: ".swiper-pagination",
-                            clickable: true,
+                        // pagination: {
+                        //     el: ".swiper-pagination",
+                        //     clickable: true,
+                        // },
+                        navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev'
                         },
                         on: {
                             click: function (swiper, event) {
@@ -69,6 +73,45 @@ define(function (require) {
                 type: '',
                 value: ''
             },
+            popular: function() {
+                SS.mask.show();
+                getData(SS.service.baseUrl + "popular")
+                .then(data => {
+                    $.jStorage.set("movie-list", data.results);
+                    let outputData = data.results.map((item) => {
+                        return {
+                            imageSrc: SS.image.baseUrl + item.poster_path
+                        }
+                    });
+                    viewModel.slideSection.kSlideList.setData(outputData);
+                    swiper.destroy();
+                    swiper = new Swiper(".mySwiper", {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                        // pagination: {
+                        //     el: ".swiper-pagination",
+                        //     clickable: true,
+                        // },
+                        navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev'
+                        },
+                        on: {
+                            click: function (swiper, event) {
+                                var movieDtail = $.jStorage.get('movie-list')[swiper.clickedIndex];
+                                viewModel.modalSection.modalBackgroundImage(`url('${SS.image.baseUrl + movieDtail.backdrop_path}')`);
+                                viewModel.modalSection.posterSrc(SS.image.baseUrl + movieDtail.poster_path);
+                                viewModel.modalSection.movieTitle(movieDtail.title);
+                                viewModel.modalSection.releaseYear('(' + movieDtail.title + ')');
+                                viewModel.modalSection.summaryContent(movieDtail.overview);
+                                $(`.modal-movie-detail`).css(`display`,`flex`);
+                                $(`.modal-movie-detail`).modal(`show`);
+                            }
+                        }
+                    });
+                    SS.mask.hide();
+                });
+            },
             trending: function() {
                 SS.mask.show();
                 getData(SS.service.baseUrl + "trending")
@@ -84,9 +127,13 @@ define(function (require) {
                     swiper = new Swiper(".mySwiper", {
                         slidesPerView: 3,
                         spaceBetween: 30,
-                        pagination: {
-                            el: ".swiper-pagination",
-                            clickable: true,
+                        // pagination: {
+                        //     el: ".swiper-pagination",
+                        //     clickable: true,
+                        // },
+                        navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev'
                         },
                         on: {
                             click: function (swiper, event) {
@@ -119,9 +166,13 @@ define(function (require) {
                     swiper = new Swiper(".mySwiper", {
                         slidesPerView: 3,
                         spaceBetween: 30,
-                        pagination: {
-                            el: ".swiper-pagination",
-                            clickable: true,
+                        // pagination: {
+                        //     el: ".swiper-pagination",
+                        //     clickable: true,
+                        // },
+                        navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev'
                         },
                         on: {
                             click: function (swiper, event) {
@@ -145,8 +196,8 @@ define(function (require) {
                 const cancelBtn = $(".cancel-icon");
                 const searchInput = $("input");
                 if(searchBtn.hasClass('active')) {
-                    SS.mask.show();
                     if(viewModel.navbarSection.searchBox()) {
+                        SS.mask.show();
                         getData("https://api.themoviedb.org/3/search/" + "movie", { "api_key": SS.apiKey, "language": "zh-TW", "query": viewModel.navbarSection.searchBox(), "page": "1" })
                             .then(data => {
                                 if(data.results.length === 0) {
@@ -166,9 +217,13 @@ define(function (require) {
                                 swiper = new Swiper(".mySwiper", {
                                     slidesPerView: 3,
                                     spaceBetween: 30,
-                                    pagination: {
-                                        el: ".swiper-pagination",
-                                        clickable: true,
+                                    // pagination: {
+                                    //     el: ".swiper-pagination",
+                                    //     clickable: true,
+                                    // },
+                                    navigation: {
+                                        nextEl: '.swiper-button-next',
+                                        prevEl: '.swiper-button-prev'
                                     },
                                     on: {
                                         click: function (swiper, event) {

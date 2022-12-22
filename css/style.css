@@ -37,6 +37,9 @@ h3 {
 .swiper {
     width: 80%;
     height: 70%;
+    --swiper-theme-color: #ff6600;/* 设置Swiper风格 */
+    --swiper-navigation-color: rgb(212, 212, 212);;/* 单独设置按钮颜色 */
+    --swiper-navigation-size: 50px;/* 设置按钮大小 */
 }
 
 .swiper-slide {
